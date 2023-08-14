@@ -24,7 +24,7 @@ public class UserLoginTest {
         }
     }
     @Test
-    @DisplayName("логин под существующим пользователем")
+    @DisplayName("Проверка логина под существующим пользователем")
     public void userLoginTest() {
         userClient.create(user);
         ValidatableResponse loginResponse = userClient.login(UserCredentials.from(user));
@@ -36,7 +36,7 @@ public class UserLoginTest {
 
     }
     @Test
-    @DisplayName("логин под существующим пользователем")
+    @DisplayName("Проверка логина несуществующим пользователем")
     public void userCannotBeLoginWWrongEmailAndPasswordTest() {
         userClient.create(user);
         user.setEmail("WrongEmail");
